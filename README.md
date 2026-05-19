@@ -1,4 +1,4 @@
-# SheepHerding — Unity ML-Agents Reinforcement Learning
+# Sheep Herding Unity ML-Agents Reinforcement Learning
 
 A reinforcement learning environment built with Unity 2023 and ML-Agents 2.0, where an AI sheepdog learns to herd a flock of sheep into a pen using Proximal Policy Optimization (PPO).
 
@@ -6,18 +6,19 @@ A reinforcement learning environment built with Unity 2023 and ML-Agents 2.0, wh
 ![ML-Agents](https://img.shields.io/badge/ML--Agents-2.0.2-blue)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-yellow?logo=python)
 
+[![Watch the demo](https://img.youtube.com/vi/QVnRGA8Kcm0/maxresdefault.jpg)](https://youtu.be/QVnRGA8Kcm0)
+
 ---
 
 ## Overview
 
-The agent (sheepdog) observes its surroundings via a vector of continuous inputs and a set of ray-cast sensors, then outputs continuous movement actions to round up all sheep. Sheep exhibit emergent flocking behaviour — they wander, flee from the dog, and cluster together — making the task non-trivial.
+The agent (sheepdog) observes its surroundings via a vector of continuous inputs and a set of ray-cast sensors, then outputs continuous 
+movement actions to round up all sheep. 
 
 **Key features:**
 - Continuous action space (forward/strafe/rotate)
 - Multi-signal reward shaping: per-step progress, per-sheep completion bonuses, scatter penalties
-- Realistic sheep AI: Reynolds flocking + fear-based fleeing
 - ScriptableObject settings for easy hyperparameter tuning without code changes
-- ONNX model export for inference inside and outside Unity
 
 ---
 
@@ -70,7 +71,7 @@ pip install mlagents
 ### 1. Clone and open in Unity
 
 ```bash
-git clone https://github.com/<your-username>/SheepHerding.git
+git clone https://github.com/tobp03/sheep-herding.git
 ```
 
 Open the project in Unity Hub using Unity **2023.1.22f1**, then open `Assets/Scenes/SampleScene.unity`.
@@ -206,6 +207,36 @@ To view all runs in TensorBoard:
 ```bash
 tensorboard --logdir results
 ```
+
+### Dog Spawn Position 
+
+Across the runs, one of the most impactful configuration changes was the dog's spawn position relative to the pen.
+
+**Initial position:**
+
+![Initial dog spawn position](docs/pos1.png)
+
+In the early runs the dog spawned directly opposite the pen — on the far side of the arena. This turned out to be an inadvertent shortcut: because sheep flee from the dog, placing the dog behind the flock meant the sheep were already being pushed toward the pen just by the dog's presence. The agent could accumulate rewards passively, without ever learning a genuine herding strategy.
+
+**Updated position:**
+
+![Updated dog spawn position](docs/newdogpos.png)
+
+Moving the dog's spawn to a different side of the arena removed this free ride. Now the sheep don't naturally drift toward the pen when the dog approaches — the agent has to actively outmanoeuvre the flock, cut off escape routes, and drive sheep in the right direction. This single change significantly increased task difficulty and forced the agent to develop more purposeful behaviour.
+
+### Training Progression
+
+**~850k steps — early herding behaviour**
+
+![Training at 850k steps](docs/1.gif)
+
+By 850k steps the agent has learned the core loop: chase the flock, get behind the sheep, and push them toward the pen. Movement is still fairly direct and the agent struggles when sheep scatter.
+
+**~4.8M steps — refined strategy**
+
+![Training at 4.8M steps](docs/2.gif)
+
+By the end of training the agent shows noticeably more sophisticated behaviour, herding multiple sheep simultaneously, and doubling back to collect stragglers that drifted away from the group. That said, it still couldn't reliably capture the full flock: peak performance was typically 5–6 out of 7 sheep penned per episode. Getting that last sheep, which tends to flee to a corner while the dog is occupied with the group, remained an open challenge.
 
 ---
 

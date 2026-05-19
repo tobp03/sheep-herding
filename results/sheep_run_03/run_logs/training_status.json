@@ -1,0 +1,29 @@
+{
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.7.1+cu110"
+    },
+    "SheepHerding": {
+        "checkpoints": [
+            {
+                "steps": 0,
+                "file_path": "results\\sheep_run_03\\SheepHerding\\SheepHerding-0.onnx",
+                "reward": null,
+                "creation_time": 1778500142.7191422,
+                "auxillary_file_paths": [
+                    "results\\sheep_run_03\\SheepHerding\\SheepHerding-0.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 0,
+            "file_path": "results\\sheep_run_03\\SheepHerding.onnx",
+            "reward": null,
+            "creation_time": 1778500142.7191422,
+            "auxillary_file_paths": [
+                "results\\sheep_run_03\\SheepHerding\\SheepHerding-0.pt"
+            ]
+        }
+    }
+}

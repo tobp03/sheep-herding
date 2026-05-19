@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1626448f73268ca43814a2a84d280bf8, type: 3}
+  m_Name: SheepHerdingSettings
+  m_EditorClassIdentifier: 
+  dogMoveSpeed: 8
+  dogRotateSpeed: 180
+  dogStrafeSpeed: 5
+  sheepMoveSpeed: 3.5
+  sheepFearRadius: 8
+  sheepFleeSpeed: 8
+  sheepWanderStrength: 1.05
+  sheepFlockingStrength: 1.8
+  sheepSeparationRadius: 1.8
+  sheepCohesionRadius: 7
+  maxEpisodeDuration: 120
+  sheepCount: 7
+  spawnAreaHalfSize: 7.5
+  sheepTowardPenReward: 0.003
+  sheepEnteredPenReward: 2
+  sheepInPenPersistenceReward: 0.005
+  sheepScatterPenalty: -0.005
+  timePenalty: -0.0003
+  timeoutPenalty: -1
+  completionReward: 5
+  wallCollisionPenalty: -0.005

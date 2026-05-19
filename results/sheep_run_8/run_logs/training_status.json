@@ -1,0 +1,65 @@
+{
+    "SheepHerding": {
+        "checkpoints": [
+            {
+                "steps": 4699985,
+                "file_path": "results\\sheep_run_8\\SheepHerding\\SheepHerding-4699985.onnx",
+                "reward": 82.614298584871,
+                "creation_time": 1778533138.9318957,
+                "auxillary_file_paths": [
+                    "results\\sheep_run_8\\SheepHerding\\SheepHerding-4699985.pt"
+                ]
+            },
+            {
+                "steps": 4799996,
+                "file_path": "results\\sheep_run_8\\SheepHerding\\SheepHerding-4799996.onnx",
+                "reward": 104.04758580525716,
+                "creation_time": 1778533504.6922421,
+                "auxillary_file_paths": [
+                    "results\\sheep_run_8\\SheepHerding\\SheepHerding-4799996.pt"
+                ]
+            },
+            {
+                "steps": 4899917,
+                "file_path": "results\\sheep_run_8\\SheepHerding\\SheepHerding-4899917.onnx",
+                "reward": 101.12445080280304,
+                "creation_time": 1778533874.417519,
+                "auxillary_file_paths": [
+                    "results\\sheep_run_8\\SheepHerding\\SheepHerding-4899917.pt"
+                ]
+            },
+            {
+                "steps": 4999949,
+                "file_path": "results\\sheep_run_8\\SheepHerding\\SheepHerding-4999949.onnx",
+                "reward": 72.18422078490258,
+                "creation_time": 1778534236.6523736,
+                "auxillary_file_paths": [
+                    "results\\sheep_run_8\\SheepHerding\\SheepHerding-4999949.pt"
+                ]
+            },
+            {
+                "steps": 5000077,
+                "file_path": "results\\sheep_run_8\\SheepHerding\\SheepHerding-5000077.onnx",
+                "reward": 72.18422078490258,
+                "creation_time": 1778534236.7472434,
+                "auxillary_file_paths": [
+                    "results\\sheep_run_8\\SheepHerding\\SheepHerding-5000077.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 5000077,
+            "file_path": "results\\sheep_run_8\\SheepHerding.onnx",
+            "reward": 72.18422078490258,
+            "creation_time": 1778534236.7472434,
+            "auxillary_file_paths": [
+                "results\\sheep_run_8\\SheepHerding\\SheepHerding-5000077.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

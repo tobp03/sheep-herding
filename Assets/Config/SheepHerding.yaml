@@ -1,0 +1,38 @@
+behaviors:
+  SheepHerding:
+    trainer_type: ppo
+
+    hyperparameters:
+      # Number of experiences per gradient update
+      batch_size: 1024
+      # Total experiences collected before an update
+      buffer_size: 10240
+      learning_rate: 3.0e-4
+      # Entropy bonus — keeps exploration alive early on
+      beta: 5.0e-3
+      # Clipping range for PPO policy updates
+      epsilon: 0.2
+      # GAE lambda — higher = lower variance but more bias
+      lambd: 0.95
+      num_epoch: 3
+      learning_rate_schedule: linear
+
+    network_settings:
+      # Normalise inputs — important with mixed-scale observations
+      normalize: true
+      hidden_units: 256
+      num_layers: 3
+
+    reward_signals:
+      extrinsic:
+        # High gamma encourages the agent to value future rewards (long-horizon task)
+        gamma: 0.995
+        strength: 1.0
+
+    # Total environment steps to train for
+    max_steps: 5_000_000
+    # Steps of experience before an update is computed
+    time_horizon: 128
+    summary_freq: 10_000
+    keep_checkpoints: 5
+    checkpoint_interval: 100_000

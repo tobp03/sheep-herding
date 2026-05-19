@@ -1,0 +1,38 @@
+{
+    "SheepHerding": {
+        "checkpoints": [
+            {
+                "steps": 99984,
+                "file_path": "results\\sheep_run_7\\SheepHerding\\SheepHerding-99984.onnx",
+                "reward": 5.168136336840689,
+                "creation_time": 1778516327.2237446,
+                "auxillary_file_paths": [
+                    "results\\sheep_run_7\\SheepHerding\\SheepHerding-99984.pt"
+                ]
+            },
+            {
+                "steps": 139224,
+                "file_path": "results\\sheep_run_7\\SheepHerding\\SheepHerding-139224.onnx",
+                "reward": 10.577062973752618,
+                "creation_time": 1778516466.8249977,
+                "auxillary_file_paths": [
+                    "results\\sheep_run_7\\SheepHerding\\SheepHerding-139224.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 139224,
+            "file_path": "results\\sheep_run_7\\SheepHerding.onnx",
+            "reward": 10.577062973752618,
+            "creation_time": 1778516466.8249977,
+            "auxillary_file_paths": [
+                "results\\sheep_run_7\\SheepHerding\\SheepHerding-139224.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}

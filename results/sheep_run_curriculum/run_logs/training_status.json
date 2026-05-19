@@ -1,0 +1,56 @@
+{
+    "SheepHerding": {
+        "checkpoints": [
+            {
+                "steps": 36502,
+                "file_path": "results\\sheep_run_curriculum\\SheepHerding\\SheepHerding-36502.onnx",
+                "reward": -1.688959160198768,
+                "creation_time": 1778507002.5881677,
+                "auxillary_file_paths": [
+                    "results\\sheep_run_curriculum\\SheepHerding\\SheepHerding-36502.pt"
+                ]
+            },
+            {
+                "steps": 99987,
+                "file_path": "results\\sheep_run_curriculum\\SheepHerding\\SheepHerding-99987.onnx",
+                "reward": null,
+                "creation_time": 1778507181.6159024,
+                "auxillary_file_paths": [
+                    "results\\sheep_run_curriculum\\SheepHerding\\SheepHerding-99987.pt"
+                ]
+            },
+            {
+                "steps": 199995,
+                "file_path": "results\\sheep_run_curriculum\\SheepHerding\\SheepHerding-199995.onnx",
+                "reward": -0.8176195396420857,
+                "creation_time": 1778507381.6301208,
+                "auxillary_file_paths": [
+                    "results\\sheep_run_curriculum\\SheepHerding\\SheepHerding-199995.pt"
+                ]
+            },
+            {
+                "steps": 268546,
+                "file_path": "results\\sheep_run_curriculum\\SheepHerding\\SheepHerding-268546.onnx",
+                "reward": -1.13741095084697,
+                "creation_time": 1778507585.5521097,
+                "auxillary_file_paths": [
+                    "results\\sheep_run_curriculum\\SheepHerding\\SheepHerding-268546.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 268546,
+            "file_path": "results\\sheep_run_curriculum\\SheepHerding.onnx",
+            "reward": -1.13741095084697,
+            "creation_time": 1778507585.5521097,
+            "auxillary_file_paths": [
+                "results\\sheep_run_curriculum\\SheepHerding\\SheepHerding-268546.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.28.0",
+        "torch_version": "1.7.1+cu110"
+    }
+}
